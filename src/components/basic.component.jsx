@@ -3,21 +3,28 @@ import styles from './basic.module.scss'
 import BackgroundImage from '../assets/bg-1.jpg';
 
 
-export default function Basic({ image, headline }) {
-
+export default function Basic({ 
+  image, 
+  headline,
+  scrollTo,
+  goToSectionRef,
+  showArrow
+}) {
+  const sectionRef = useRef();
   return(
-    //figure out passing props later
-    <div className={styles.section} 
-    // style={{backgroundImage: `url('/src/assets/bg-1.jpg`}}>
+    <div className={styles.section} ref={sectionRef}
       style={{backgroundImage: `${image}`}}>
-    {/* <div className={styles.section}> */}
       <div className={styles.copy}>
         <h2>{headline}</h2>
       </div>
-      {/* Image tag not available and related to Next.js & React Native?? */}
-      {/* <Image src={`/src/assets/bg.jpg`} layout={ `fill`} /> */}
+    {/* ternary if statement, if showArrow, then show button, else, no button */}
+    {showArrow && (
+            <button 
+            className={styles.downArrow} 
+            onClick={() => scrollTo(goToSectionRef)}>
+          </button>
+    )}
 
-      <div className={styles.downArrow}></div>
     </div>
   )
 }
