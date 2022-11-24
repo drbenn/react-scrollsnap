@@ -9,7 +9,9 @@ export default function Basic() {
       <div className={styles.copy}>
         <h2>Basic Scrollsnap</h2>
       </div>
-      {/* <img src={'../assets/bg.jpg'} layout={'fill'} /> */}
+      {/* Image tag not available and related to Next.js & React Native?? */}
+      {/* <Image src={'../assets/bg.jpg'} layout={'fill'} /> */} 
+
 
       <div className={styles.downArrow}></div>
     </div>
