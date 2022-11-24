@@ -14,6 +14,7 @@ function App() {
   }
 
   return (
+    // the standalong non-module className 'container' is for gsap to id the page as all scroll components are contained within this container 
     <div className={`container ${styles.container}`}>
       {/* passing props https://beta.reactjs.org/learn/passing-props-to-a-component */}
       <div ref={section1}>
