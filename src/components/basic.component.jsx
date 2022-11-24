@@ -10,8 +10,7 @@ export default function Basic() {
         <h2>Basic Scrollsnap</h2>
       </div>
       {/* Image tag not available and related to Next.js & React Native?? */}
-      {/* <Image src={'../assets/bg.jpg'} layout={'fill'} /> */} 
-
+      {/* <Image src={`/src/assets/bg.jpg`} layout={ `fill`} /> */}
 
       <div className={styles.downArrow}></div>
     </div>
